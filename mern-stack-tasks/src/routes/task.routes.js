@@ -14,14 +14,20 @@ router.get('/',(req,res)=>{
     //si la base y tabla no existe mongodb la crea por nosotros
 
   });
-
+ //Otra forma de escribir codigo asyncrono
+ Task.find()
+    .then(data=>console.log(data))
+    .catch(err => console.log(err))
 
    // res.send('Hello word');
   //devolvemos en formato json las api
   res.json({
     status:'API WORKS!'
   });
+
 });
+
+//USANDO DE MANERA ASINCRONA USANDO A AWAIT
 
 module.exports=router;
 
